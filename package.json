@@ -1,0 +1,20 @@
+{
+  "name": "Garibaldo-TwitterBot",
+  "version": "1.0.0",
+  "description": "Bot do Twitter do @querosertech",
+  "main": "app.js",
+  "scripts": {
+  	  "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node app.js"
+  },
+  "author": "Matheus Fidelis",
+  "license": "GNU",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongoose": "~4.6.1",
+    "nodemon": "^1.10.2",
+    "express-load": "~1.1.14",
+    "body-parser": "1.15.2",
+    "twitter": "1.7.0"
+  }
+}
