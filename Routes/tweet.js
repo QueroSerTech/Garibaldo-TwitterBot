@@ -1,11 +1,11 @@
 module.exports = function(app) {
 
-  var TwitterPackage = require('twitter');
-
-  app.get("/tweet/:tweet?", function (req, res) {
+  app.get("/tweet/newtweet/:tweet?", function (req, res) {
     var tweet = req.params.tweet;
-    "use strict";
-    var Twitter = require("../Services/tweet.js");
+    var Twitter = require("../Services/Twitter/newTweet");
+    console.log("Chegou na rota");
+    Twitter.sendTweet(tweet);
+    res.send(tweet);
   });
 
 }

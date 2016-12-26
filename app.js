@@ -1,9 +1,7 @@
 var express = require('express');
-//var mongo = require('mongoose');
 var bodyParser = require('body-parser');
 var load = require('express-load')
 var app = express();
-
 
 load('Models')
   .then('Routes')
