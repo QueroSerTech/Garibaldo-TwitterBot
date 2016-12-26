@@ -1,14 +1,12 @@
 
-var TwitterClient = require('twitter');
-
 /**
  * Retorna o Objeto de configuração do Twitter
  * @todo {Pegar as configurações do Secret de um arquivo JSON}
  * @return {[object]} [Configurações do App do Twitter]
  */
-function _getSecret() {
+function _getTwitter() {
   var Config = require("../../Configs/TwitterConfig");
-  return Config.getConfig();
+  return Config.getApp();
 }
 
 module.exports = {
@@ -19,7 +17,7 @@ module.exports = {
    * @return {[type]}     [description]
    */
   sendTweet : function (msg) {
-    var Tweet = new TwitterClient(_getSecret());
+    var Tweet = _getTwitter();
 
     Tweet.post('statuses/update', {status: msg},  function(error, tweet, response){
       if(error){

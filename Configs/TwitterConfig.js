@@ -1,4 +1,8 @@
 
+/**
+ * [ConfigFile Arquivo Json de configuração]
+ * @type {String}
+ */
 var ConfigFile = "./Json/twitterConfig.json";
 
 /**
@@ -11,7 +15,13 @@ function _createConfig() {
 }
 
 module.exports = {
-  getConfig : function () {
-    return _createConfig();
+
+  /**
+   * Retorna um client do Twitter configurado.
+   * @return {[type]} [description]
+   */
+  getApp : function () {
+    var TwitterClient = require('twitter');
+    return new TwitterClient(_createConfig());
   }
 }
