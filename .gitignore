@@ -1,1 +1,4 @@
 node_modules
+./Configs/Json/*
+./Configs/Json/
+Configs/Json/twitterConfig.json
