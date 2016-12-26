@@ -1,9 +1,3 @@
-var secret = {
-  consumer_key: '',
-  consumer_secret: '',
-  access_token_key: '',
-  access_token_secret: ''
-}
 
 var TwitterClient = require('twitter');
 
@@ -13,7 +7,8 @@ var TwitterClient = require('twitter');
  * @return {[object]} [Configurações do App do Twitter]
  */
 function _getSecret() {
-  return secret;
+  var Config = require("../../Configs/TwitterConfig");
+  return Config.getConfig();
 }
 
 module.exports = {
